@@ -2,12 +2,11 @@ require "HyakuninIssyu/version"
 require "yaml"
 
 class HyakuninIssyu
-  Authors = YAML.load_file(File.expand_path(File.join('..', 'data', 'authors.yml'), __FILE__))
-  Songs = YAML.load_file(File.expand_path(File.join('..', 'data', 'songs.yml'), __FILE__))
+	def initialize
+		@hoge = "hoge"
+	end
 
-	class << self
-		def author
-			Authors
-		end
+	def calc
+		"hogehoge"
 	end
 end

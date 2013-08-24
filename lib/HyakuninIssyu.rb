@@ -1,7 +1,7 @@
 require "HyakuninIssyu/version"
 require "yaml"
 
-class HyakuninIssyu
+module HyakuninIssyu
 	def initialize
 		@hoge = "hoge"
 	end

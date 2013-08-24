@@ -23,22 +23,22 @@ Or install it yourself as:
 
 ## Usage
 
-###Poem Info
+###Poem Info | 歌情報の取得
 When retrieving the 64th poem (it's one of my favourite),
 
     poem = HyakuninIssyu::Poem.new(64)
-		poem.full   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
-		poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
-		poem.first   #=> "朝ぼらけ宇治の川霧たえだえに"
-		poem.last   #=> "あらはれわたる瀬々の網代木"
+    poem.full   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
+    poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
+    poem.first   #=> "朝ぼらけ宇治の川霧たえだえに"
+    poem.last   #=> "あらはれわたる瀬々の網代木"
 
 
-###Poet Info
+###Poet Info | 歌人情報の取得
 To retrieve the poet info for the same poem,
 
     poet = HyakuninIssyu::Poet.new(64)
-		poet.name   #=> "権中納言定頼"
-		poet.period   #=> "995-1045"
+    poet.name   #=> "権中納言定頼"
+    poet.period   #=> "995-1045"
     poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
 
 

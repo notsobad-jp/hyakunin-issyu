@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = HyakuninIssyu::VERSION
   spec.authors       = ["tomomichi"]
   spec.email         = ["tomomichi.onishi@gmail.com"]
-  spec.description   = %q{Database for HyakuninIssyu, 100 poems by 100 poets.}
-  spec.summary       = %q{Database for HyakuninIssyu, 100 poems by 100 poets.}
+  spec.description   = %q{This Gem offer all the information about Hyakunin-issyu, the One Hundred Poems by One Hundred Poets.}
+  spec.summary       = %q{This Gem offer all the information about Hyakunin-issyu, the One Hundred Poems by One Hundred Poets.}
   spec.homepage      = "https://github.com/Tomomichi/HyakuninIssyu"
   spec.license       = "MIT"
 

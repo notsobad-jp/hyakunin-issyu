@@ -10,7 +10,7 @@ module HyakuninIssyu
 		end
 
 		def full
-			@poem.poem
+			@poem["poem"]
 		end
 
 		def first(poem)

@@ -7,6 +7,14 @@ class HyakuninIssyu
 		@poet = Poet.new(id)
 	end
 
+	def poem
+		@poem
+	end
+
+	def poet
+		@poet
+	end
+
 	class Poem
 		def initialize(id)
 			poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))

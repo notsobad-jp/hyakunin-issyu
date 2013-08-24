@@ -28,7 +28,6 @@ module HyakuninIssyu
 		def name
 		end
 	end
-	module_function :poem
 
 	class Poet
 		POETS = YAML.load_file(File.expand_path(File.join('..', 'data', 'poets.yml'), __FILE__))

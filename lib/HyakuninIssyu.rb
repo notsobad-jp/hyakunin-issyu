@@ -1,7 +1,12 @@
 require "HyakuninIssyu/version"
 require "yaml"
 
-module HyakuninIssyu
+class HyakuninIssyu
+	def initialize(id)
+		@poem = Poem.new(id)
+		@poet = Poet.new(id)
+	end
+
 	class Poem
 		def initialize(id)
 			poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))

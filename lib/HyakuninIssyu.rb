@@ -2,7 +2,6 @@ require "HyakuninIssyu/version"
 require "yaml"
 
 module HyakuninIssyu
-
 	class Poem
 		def initialize(id)
 			poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))
@@ -13,19 +12,26 @@ module HyakuninIssyu
 			@poem["poem"]
 		end
 
-		def first(poem)
-			poem.poem
+		def first
+			poem_data = @poem["poem"].split(" ")
+			first = ''
+			for i in 0..2
+				first << poem_data[i]
+			end
+			return first
 		end
 
-		def last(poem)
-			poem.poem
+		def last
+			poem_data = @poem["poem"].split(" ")
+			first = ''
+			for i in 3..4
+				first << poem_data[i]
+			end
+			return first
 		end
 
 		def comment(poem)
-			poem.comment
-		end
-
-		def name
+			@poem['comment']
 		end
 	end
 

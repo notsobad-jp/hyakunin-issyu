@@ -22,24 +22,26 @@ Or install it yourself as:
     $ gem install HyakuninIssyu
 
 ## Usage
+When retrieving the 64th poem (it's one of my favourite),
+make the instance of HyakuninIssyu class with its poem id first.
+
+    data = HyakuninIssyu.new(64)
 
 ###Poem Info | 歌情報の取得
-When retrieving the 64th poem (it's one of my favourite),
+To retrieve the poem info,
 
-    poem = HyakuninIssyu::Poem.new(64)
-    poem.full   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
-    poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
-    poem.first   #=> "朝ぼらけ宇治の川霧たえだえに"
-    poem.last   #=> "あらはれわたる瀬々の網代木"
+    data.poem.full   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
+    data.poem.first   #=> "朝ぼらけ宇治の川霧たえだえに"
+    data.poem.last   #=> "あらはれわたる瀬々の網代木"
+    data.poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
 
 
 ###Poet Info | 歌人情報の取得
 To retrieve the poet info for the same poem,
 
-    poet = HyakuninIssyu::Poet.new(64)
-    poet.name   #=> "権中納言定頼"
-    poet.period   #=> "995-1045"
-    poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
+    data.poet.name   #=> "権中納言定頼"
+    data.poet.period   #=> "995-1045"
+    data.poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
 
 
 ## Contributing

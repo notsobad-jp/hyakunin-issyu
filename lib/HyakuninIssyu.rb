@@ -30,12 +30,27 @@ module HyakuninIssyu
 			return first
 		end
 
-		def comment(poem)
+		def comment
 			@poem['comment']
 		end
 	end
 
 	class Poet
-		POETS = YAML.load_file(File.expand_path(File.join('..', 'data', 'poets.yml'), __FILE__))
+		def initialize(id)
+			poets = YAML.load_file(File.expand_path(File.join('..', 'data', 'poets.yml'), __FILE__))
+			@poet = poets[id-1]
+		end
+
+		def name
+			@poet['name']
+		end
+
+		def period
+			@poet['period']
+		end
+
+		def info
+			@poet['info']
+		end
 	end
 end

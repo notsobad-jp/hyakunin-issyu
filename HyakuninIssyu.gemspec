@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tomomichi.onishi@gmail.com"]
   spec.description   = %q{Database for HyakuninIssyu, 100 poems by 100 poets.}
   spec.summary       = %q{Database for HyakuninIssyu, 100 poems by 100 poets.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Tomomichi/HyakuninIssyu"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

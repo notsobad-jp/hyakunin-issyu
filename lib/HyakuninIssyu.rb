@@ -6,11 +6,11 @@ module HyakuninIssyu
 	class Poem
 		def initialize(id)
 			poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))
-			POEM = poems[id-1]
+			@poem = poems[id-1]
 		end
 
-		def full(poem)
-			poem.poem
+		def full
+			@poem.poem
 		end
 
 		def first(poem)

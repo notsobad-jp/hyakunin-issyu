@@ -19,9 +19,6 @@ class HyakuninIssyu
 		def initialize(id)
 			poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))
 			@poem = poems[id-1]
-			@full = Full.new(@poem)
-			@first = First.new(@poem)
-			@last = Last.new(@poem)
 		end
 
 		def kana
@@ -33,15 +30,15 @@ class HyakuninIssyu
 		end
 
 		def full
-			@full
+			Full.new(@poem)
 		end
 
 		def first
-			@first
+		  First.new(@poem)
 		end
 
 		def last
-			@last
+			Last.new(@poem)
 		end
 
 		def comment

@@ -30,9 +30,15 @@ make the instance of HyakuninIssyu class with its poem id first.
 ###Poem Info | 歌情報の取得
 To retrieve the poem info,
 
-    data.poem.full   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
-    data.poem.first   #=> "朝ぼらけ宇治の川霧たえだえに"
-    data.poem.last   #=> "あらはれわたる瀬々の網代木"
+    data.poem.kanji   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
+    data.poem.kana   #=> "あさぼらけうじのかわぎりたえだえに　あらはれわたるせぜのあじろぎ"
+
+    data.poem.first.kanji   #=> "朝ぼらけ宇治の川霧たえだえに"
+    data.poem.first.kana   #=> "あさぼらけうじのかわぎりたえだえに"
+
+    data.poem.last.kanji   #=> "あらはれわたる瀬々の網代木"
+    data.poem.last.kana   #=> "あらはれわたるせぜのあじろぎ"
+
     data.poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
 
 

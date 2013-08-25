@@ -1,7 +1,7 @@
-require "HyakuninIssyu"
+require "spec_helper.rb"
 
 describe HyakuninIssyu do
-	describe 'show the particular poem when the id is specified' do
+	describe 'poem with particular poem id' do
 		before do
 			@id = rand(100)+1
 			@test_poem = HyakuninIssyu.new(@id)
@@ -44,7 +44,7 @@ describe HyakuninIssyu do
 		end
 	end
 
-	describe 'create the instance without poem_id' do
+	describe 'poem without any particular ids' do
 		before do
 			@test_poem = HyakuninIssyu.new
 		end

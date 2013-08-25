@@ -43,7 +43,7 @@ To retrieve the poem info,
 
     data.poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
 
-		data.poem.list   #=> ["秋の田の かりほの庵の 苫をあらみ わが衣手は 露にぬれつつ", "春過ぎて..."]
+    data.poem.list   #=> ["秋の田の かりほの庵の 苫をあらみ わが衣手は 露にぬれつつ", "春過ぎて..."]
 
 "list" method returns all the poem data in array.
 
@@ -53,7 +53,7 @@ To retrieve the poet info for the same poem,
     data.poet.name   #=> "権中納言定頼"
     data.poet.period   #=> "995-1045"
     data.poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
-		data.poet.list   #=> ["天智天皇", "持統天皇", "柿本人麻呂", ... "]
+    data.poet.list   #=> ["天智天皇", "持統天皇", "柿本人麻呂", ... "]
 
 "list" method returns all the poet names in array.
 

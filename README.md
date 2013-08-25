@@ -1,7 +1,7 @@
 # HyakuninIssyu
 
 "HyakuninIssyu" is a Gem for installing poems and poets info of Hyakunin-Issyu, 100 poems by 100 poets into your apps.
-You can take any poems of Hyakunin-Issyu, poets info and a commentary on it, in addition of the feature to take the first or last half of the poem.
+You can take any poems of Hyakunin-Issyu, poets info and a commentary on it, in addition to the feature to take the first or last half of the poem.
 (it may be necessary for building game style Hyakunin-Issyu application)
 
 HyakuninIssyuは、百人一首の歌情報・歌人情報をアプリに取り込むためのGemです。
@@ -27,6 +27,8 @@ make the instance of HyakuninIssyu class with its poem id first.
 
     data = HyakuninIssyu.new(64)
 
+If you don't pass the poem id, it retrieve the data of the first poem by Tenchi-Tennoh.
+
 ###Poem Info | 歌情報の取得
 To retrieve the poem info,
 
@@ -41,6 +43,9 @@ To retrieve the poem info,
 
     data.poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
 
+		data.poem.list   #=> ["秋の田の かりほの庵の 苫をあらみ わが衣手は 露にぬれつつ", "春過ぎて..."]
+
+"list" method returns all the poem data in array.
 
 ###Poet Info | 歌人情報の取得
 To retrieve the poet info for the same poem,
@@ -48,7 +53,9 @@ To retrieve the poet info for the same poem,
     data.poet.name   #=> "権中納言定頼"
     data.poet.period   #=> "995-1045"
     data.poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
+		data.poet.list   #=> ["天智天皇", "持統天皇", "柿本人麻呂", ... "]
 
+"list" method returns all the poet names in array.
 
 ## Contributing
 

@@ -21,6 +21,10 @@ class HyakuninIssyu
 			@poem = id ? @poems[id-1] : @poems[0]
 		end
 
+		def id
+			@poem['id']
+		end
+
 		def list
 			list = Array.new
 			for i in 0..99
@@ -117,6 +121,10 @@ class HyakuninIssyu
 			@poet = id ? @poets[id-1] : @poets[0]
 		end
 
+		def id
+			@poet['id']
+		end
+
 		def list
 			list = Array.new
 			for i in 0..99
@@ -135,6 +143,22 @@ class HyakuninIssyu
 
 		def info
 			@poet['info']
+		end
+
+		def sex
+			@poet['sex']
+		end
+
+		def male?
+			@poet['sex'] == 1
+		end
+
+		def female?
+			@poet['sex'] == 2
+		end
+
+		def monk?
+			@poet['monk'] == 1
 		end
 	end
 end

@@ -53,6 +53,10 @@ To retrieve the poet info for the same poem,
     data.poet.name   #=> "権中納言定頼"
     data.poet.period   #=> "995-1045"
     data.poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
+    data.poet.sex   #=> 1
+    data.poet.male?   #=> true
+    data.poet.female?   #=> false
+    data.poet.monk?   #=> false
     data.poet.list   #=> ["天智天皇", "持統天皇", "柿本人麻呂", ... "]
 
 "list" method returns all the poet names in array.

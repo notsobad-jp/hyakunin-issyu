@@ -2,7 +2,7 @@ require "HyakuninIssyu/version"
 require "yaml"
 
 class HyakuninIssyu
-	def initialize(id)
+	def initialize(id=nil)
 		@poem = Poem.new(id)
 		@poet = Poet.new(id)
 	end
@@ -16,9 +16,17 @@ class HyakuninIssyu
 	end
 
 	class Poem
-		def initialize(id)
-			poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))
-			@poem = poems[id-1]
+		def initialize(id=nil)
+			@poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))
+			@poem = id ? @poems[id-1] : @poems[0]
+		end
+
+		def list
+			list = Array.new
+			for i in 0..99
+				list << @poems[i]['poem']
+			end
+			return list
 		end
 
 		def kana
@@ -104,9 +112,17 @@ class HyakuninIssyu
 	end
 
 	class Poet
-		def initialize(id)
-			poets = YAML.load_file(File.expand_path(File.join('..', 'data', 'poets.yml'), __FILE__))
-			@poet = poets[id-1]
+		def initialize(id=nil)
+			@poets = YAML.load_file(File.expand_path(File.join('..', 'data', 'poets.yml'), __FILE__))
+			@poet = id ? @poets[id-1] : @poets[0]
+		end
+
+		def list
+			list = Array.new
+			for i in 0..99
+				list << @poets[i]['name']
+			end
+			return list
 		end
 
 		def name

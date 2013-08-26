@@ -1,6 +1,7 @@
 # HyakuninIssyu
-[![Build Status](https://secure.travis-ci.org/Tomomichi/HyakuninIssyu.png?branch=master(https://travis-ci.org/Tomomichi/HyakuninIssyu)
+[![Build Status](https://travis-ci.org/Tomomichi/HyakuninIssyu.png?branch=master)](https://travis-ci.org/Tomomichi/HyakuninIssyu)
 [![Dependency Status](https://gemnasium.com/Tomomichi/HyakuninIssyu.png)](https://gemnasium.com/Tomomichi/HyakuninIssyu)
+[![Coverage Status](https://coveralls.io/repos/Tomomichi/HyakuninIssyu/badge.png?branch=master)](https://coveralls.io/r/Tomomichi/HyakuninIssyu?branch=master)
 
 "HyakuninIssyu" is a Gem for installing poems and poets info of Hyakunin-Issyu, 100 poems by 100 poets into your apps.
 You can take any poems of Hyakunin-Issyu, poets info and a commentary on it, in addition to the feature to take the first or last half of the poem.

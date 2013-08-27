@@ -28,21 +28,21 @@ class HyakuninIssyu
 		def list
 			list = Array.new
 			for i in 0..99
-				list << @poems[i]['poem']
+				list << @poems[i]['poem']['kanji']
 			end
 			return list
 		end
 
 		def kana
-			@poem["kana"]
+			@poem["poem"]["kana"]
 		end
 
 		def kanji
-			@poem["poem"]
+			@poem["poem"]["kanji"]
 		end
 
-		def full
-			Full.new(@poem)
+		def en
+			@poem["poem"]["en"]
 		end
 
 		def first
@@ -57,31 +57,19 @@ class HyakuninIssyu
 			@poem['comment']
 		end
 
-		class Full
-			def initialize(data)
-				@full_kanji = data["poem"]
-				@full_kana  = data["kana"]
-			end
-
-			def kanji
-				@full_kanji
-			end
-
-			def kana
-				@full_kana
-			end
-		end
-
 		class First
 			def initialize(data)
-				kanji_data = data["poem"].split(" ")
+				kanji_data = data["poem"]["kanji"].split(" ")
 				@first_kanji = ''
 				for i in 0..2
 					@first_kanji << kanji_data[i]
 				end
 
-				kana_data = data["kana"].split("　")
+				kana_data = data["poem"]["kana"].split("　")
 				@first_kana = kana_data[0]
+
+				en_data = data["poem"]["en"].split("  ")
+				@first_en = en_data[0]
 			end
 
 			def kana
@@ -91,18 +79,25 @@ class HyakuninIssyu
 			def kanji
 				@first_kanji
 			end
+
+			def en
+				@first_en
+			end
 		end
 
 		class Last
 			def initialize(data)
-				kanji_data = data["poem"].split(" ")
+				kanji_data = data["poem"]["kanji"].split(" ")
 				@last_kanji = ''
 				for i in 3..4
 					@last_kanji << kanji_data[i]
 				end
 
-				kana_data = data["kana"].split("　")
+				kana_data = data["poem"]["kana"].split("　")
 				@last_kana = kana_data[1]
+
+				en_data = data["poem"]["en"].split("  ")
+				@last_en = en_data[1]
 			end
 
 			def kana
@@ -111,6 +106,10 @@ class HyakuninIssyu
 
 			def kanji
 				@last_kanji
+			end
+
+			def en
+				@last_en
 			end
 		end
 	end
@@ -128,13 +127,27 @@ class HyakuninIssyu
 		def list
 			list = Array.new
 			for i in 0..99
-				list << @poets[i]['name']
+				list << @poets[i]['name']['ja']
 			end
 			return list
 		end
 
 		def name
-			@poet['name']
+			Name.new(@poet)
+		end
+
+		class Name
+			def initialize(data)
+				@name = data['name']
+			end
+
+			def ja
+				@name['ja']
+			end
+
+			def en
+				@name['en']
+			end
 		end
 
 		def period
@@ -143,10 +156,6 @@ class HyakuninIssyu
 
 		def info
 			@poet['info']
-		end
-
-		def sex
-			@poet['sex']
 		end
 
 		def male?
@@ -159,6 +168,10 @@ class HyakuninIssyu
 
 		def monk?
 			@poet['monk'] == 1
+		end
+
+		def semimaru?
+			@poet['id'] == 10
 		end
 	end
 end

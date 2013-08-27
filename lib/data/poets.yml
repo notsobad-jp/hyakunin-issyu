@@ -1,6 +1,8 @@
 -
   id: 1
-  name: 天智天皇
+  name:
+    ja: 天智天皇
+    en:    Emperor Tenchi
   sex: 1
   monk: 0
   period: 626-672
@@ -8,7 +10,9 @@
 
 -
   id: 2
-  name: 持統天皇
+  name:
+    ja: 持統天皇
+    en:    Empress Jitō
   sex: 2
   monk: 0
   period: 645-703
@@ -16,7 +20,9 @@
 
 -
   id: 3
-  name: 柿本人麻呂
+  name:
+    ja: 柿本人麻呂
+    en:  Kakinomoto no Hitomaro
   sex: 1
   monk: 0
   period: 660-720
@@ -24,7 +30,9 @@
 
 -
   id: 4
-  name: 山部赤人
+  name:
+    ja: 山部赤人
+    en:  Yamabe no Akahito
   sex: 1
   monk: 0
   period: ???-736
@@ -32,7 +40,9 @@
 
 -
   id: 5
-  name: 猿丸大夫
+  name:
+    ja: 猿丸大夫
+    en:  Sarumaru
   sex: 1
   monk: 0
   period: ???-???
@@ -40,7 +50,9 @@
 
 -
   id: 6
-  name: 中納言家持
+  name:
+    ja: 中納言家持
+    en:  Ōtomo no Yakamochi
   sex: 1
   monk: 0
   period: 718-785
@@ -48,7 +60,9 @@
 
 -
   id: 7
-  name: 安倍仲麿
+  name:
+    ja: 安倍仲麿
+    en:  Abe no Nakamaro
   sex: 1
   monk: 0
   period: 698-770
@@ -56,7 +70,9 @@
 
 -
   id: 8
-  name: 喜撰法師
+  name:
+    ja: 喜撰法師
+    en:  The Monk Kisen
   sex: 1
   monk: 1
   period: ???-???
@@ -64,7 +80,9 @@
 
 -
   id: 9
-  name: 小野小町
+  name:
+    ja: 小野小町
+    en:  Ono no Komachi
   sex: 2
   monk: 0
   period: ???-???
@@ -72,7 +90,9 @@
 
 -
   id: 10
-  name: 蝉丸
+  name:
+    ja: 蝉丸
+    en:  Semimaru
   sex: 1
   monk: 1
   period: ???-???
@@ -80,7 +100,9 @@
 
 -
   id: 11
-  name: 参議篁
+  name:
+    ja: 参議篁
+    en:  Ono no Takamura
   sex: 1
   monk: 0
   period: 802-853
@@ -88,7 +110,9 @@
 
 -
   id: 12
-  name: 僧正遍昭
+  name:
+    ja: 僧正遍昭
+    en:  The Monk Henjō
   sex: 1
   monk: 1
   period: 816-890
@@ -96,7 +120,9 @@
 
 -
   id: 13
-  name: 陽成院
+  name:
+    ja: 陽成院
+    en:  Emperor Yōzei
   sex: 1
   monk: 0
   period: 869-949
@@ -104,7 +130,9 @@
 
 -
   id: 14
-  name: 河原左大臣
+  name:
+    ja: 河原左大臣
+    en:  Minamoto no Tōru
   sex: 1
   monk: 0
   period: 822-895
@@ -112,7 +140,9 @@
 
 -
   id: 15
-  name: 光孝天皇
+  name:
+    ja: 光孝天皇
+    en:  Emperor Kōkō
   sex: 1
   monk: 0
   period: 830-887
@@ -120,7 +150,9 @@
 
 -
   id: 16
-  name: 中納言行平
+  name:
+    ja: 中納言行平
+    en:  Ariwara no Yukihira
   sex: 1
   monk: 0
   period: 818-893
@@ -128,7 +160,9 @@
 
 -
   id: 17
-  name: 在原業平朝臣
+  name:
+    ja: 在原業平朝臣
+    en:  Ariwara no Narihira
   sex: 1
   monk: 0
   period: 825-880
@@ -136,7 +170,9 @@
 
 -
   id: 18
-  name: 藤原敏行朝臣
+  name:
+    ja: 藤原敏行朝臣
+    en:  Fujiwara no Toshiyuki
   sex: 1
   monk: 0
   period: ???-907(901)
@@ -144,7 +180,9 @@
 
 -
   id: 19
-  name: 伊勢
+  name:
+    ja: 伊勢
+    en:  Lady Ise
   sex: 2
   monk: 0
   period: 872-938
@@ -152,7 +190,9 @@
 
 -
   id: 20
-  name: 元良親王
+  name:
+    ja: 元良親王
+    en:  Prince Motoyoshi
   sex: 1
   monk: 0
   period: 890-943
@@ -160,7 +200,9 @@
 
 -
   id: 21
-  name: 素性法師
+  name:
+    ja: 素性法師
+    en:  The Monk Sosei
   sex: 1
   monk: 1
   period: ???-910
@@ -168,7 +210,9 @@
 
 -
   id: 22
-  name: 文屋康秀
+  name:
+    ja: 文屋康秀
+    en:  Fun'ya no Yasuhide
   sex: 1
   monk: 0
   period: ???-885
@@ -176,7 +220,9 @@
 
 -
   id: 23
-  name: 大江千里
+  name:
+    ja: 大江千里
+    en:  Ōe no Chisato
   sex: 1
   monk: 0
   period: ???-???
@@ -184,7 +230,9 @@
 
 -
   id: 24
-  name: 菅家
+  name:
+    ja: 菅家
+    en:  Sugawara no Michizane
   sex: 1
   monk: 0
   period: 845-903
@@ -192,7 +240,9 @@
 
 -
   id: 25
-  name: 三条右大臣
+  name:
+    ja: 三条右大臣
+    en:  Fujiwara no Sadakata
   sex: 1
   monk: 0
   period: 873-932
@@ -200,7 +250,9 @@
 
 -
   id: 26
-  name: 貞信公
+  name:
+    ja: 貞信公
+    en:  Fujiwara no Tadahira
   sex: 1
   monk: 0
   period: 880-949
@@ -208,7 +260,9 @@
 
 -
   id: 27
-  name: 中納言兼輔
+  name:
+    ja: 中納言兼輔
+    en:  Fujiwara no Kanesuke
   sex: 1
   monk: 0
   period: 877-933
@@ -216,7 +270,9 @@
 
 -
   id: 28
-  name: 源宗于朝臣
+  name:
+    ja: 源宗于朝臣
+    en:  Minamoto no Muneyuki
   sex: 1
   monk: 0
   period: ???-940
@@ -224,7 +280,9 @@
 
 -
   id: 29
-  name: 凡河内躬恒
+  name:
+    ja: 凡河内躬恒
+    en:  Ōshikōchi no Mitsune
   sex: 1
   monk: 0
   period: 859-925
@@ -232,7 +290,9 @@
 
 -
   id: 30
-  name: 壬生忠岑
+  name:
+    ja: 壬生忠岑
+    en:  Mibu no Tadamine
   sex: 1
   monk: 0
   period: 860-920
@@ -240,7 +300,9 @@
 
 -
   id: 31
-  name: 坂上是則
+  name:
+    ja: 坂上是則
+    en:  Sakanoue no Korenori
   sex: 1
   monk: 0
   period: ???-930
@@ -248,7 +310,9 @@
 
 -
   id: 32
-  name: 春道列樹
+  name:
+    ja: 春道列樹
+    en:  Harumichi no Tsuraki
   sex: 1
   monk: 0
   period: ???-920
@@ -256,7 +320,9 @@
 
 -
   id: 33
-  name: 紀友則
+  name:
+    ja: 紀友則
+    en:  Ki no Tomonori
   sex: 1
   monk: 0
   period: 845-907
@@ -264,7 +330,9 @@
 
 -
   id: 34
-  name: 藤原興風
+  name:
+    ja: 藤原興風
+    en:  Fujiwara no Okikaze
   sex: 1
   monk: 0
   period: ???-???
@@ -272,7 +340,9 @@
 
 -
   id: 35
-  name: 紀貫之
+  name:
+    ja: 紀貫之
+    en:  Ki no Tsurayuki
   sex: 1
   monk: 0
   period: 866-872
@@ -280,7 +350,9 @@
 
 -
   id: 36
-  name: 清原深養父
+  name:
+    ja: 清原深養父
+    en:  Kiyohara no Fukayabu
   sex: 1
   monk: 0
   period: ???-???
@@ -288,7 +360,9 @@
 
 -
   id: 37
-  name: 文屋朝康
+  name:
+    ja: 文屋朝康
+    en:  Fun'ya no Asayasu
   sex: 1
   monk: 0
   period: ???-???
@@ -296,7 +370,9 @@
 
 -
   id: 38
-  name: 右近
+  name:
+    ja: 右近
+    en:  Lady Ukon
   sex: 2
   monk: 0
   period: ???-???
@@ -304,7 +380,9 @@
 
 -
   id: 39
-  name: 参議等
+  name:
+    ja: 参議等
+    en:  Minamoto no Hitoshi
   sex: 1
   monk: 0
   period: 880-951
@@ -312,7 +390,9 @@
 
 -
   id: 40
-  name: 平兼盛
+  name:
+    ja: 平兼盛
+    en:  Taira no Kanemori
   sex: 1
   monk: 0
   period: ???-991
@@ -320,7 +400,9 @@
 
 -
   id: 41
-  name: 壬生忠見
+  name:
+    ja: 壬生忠見
+    en:  Mibu no Tadami
   sex: 1
   monk: 0
   period: ???-???
@@ -328,7 +410,9 @@
 
 -
   id: 42
-  name: 清原元輔
+  name:
+    ja: 清原元輔
+    en:  Kiyohara no Motosuke
   sex: 1
   monk: 0
   period: 908-990
@@ -336,7 +420,9 @@
 
 -
   id: 43
-  name: 権中納言敦忠
+  name:
+    ja: 権中納言敦忠
+    en:  Fujiwara no Atsutada
   sex: 1
   monk: 0
   period: 906-943
@@ -344,7 +430,9 @@
 
 -
   id: 44
-  name: 中納言朝忠
+  name:
+    ja: 中納言朝忠
+    en:  Fujiwara no Asatada
   sex: 1
   monk: 0
   period: 910-967
@@ -352,7 +440,9 @@
 
 -
   id: 45
-  name: 謙徳公
+  name:
+    ja: 謙徳公
+    en:  Fujiwara no Koremasa
   sex: 1
   monk: 0
   period: 924-972
@@ -360,7 +450,9 @@
 
 -
   id: 46
-  name: 曾禰好忠
+  name:
+    ja: 曾禰好忠
+    en:  Sone no Yoshitada
   sex: 1
   monk: 0
   period: ???-???
@@ -368,7 +460,9 @@
 
 -
   id: 47
-  name: 恵慶法師
+  name:
+    ja: 恵慶法師
+    en:  The Monk Egyō
   sex: 1
   monk: 1
   period: ???-???
@@ -376,7 +470,9 @@
 
 -
   id: 48
-  name: 源重之
+  name:
+    ja: 源重之
+    en:  Minamoto no Shigeyuki
   sex: 1
   monk: 0
   period: ???-1000
@@ -384,7 +480,9 @@
 
 -
   id: 49
-  name: 大中臣能宣朝臣
+  name:
+    ja: 大中臣能宣朝臣
+    en:  Ōnakatomi no Yoshinobu
   sex: 1
   monk: 0
   period: 921-991
@@ -392,7 +490,9 @@
 
 -
   id: 50
-  name: 藤原義孝
+  name:
+    ja: 藤原義孝
+    en: Fujiwara no Yoshitaka
   sex: 1
   monk: 0
   period: 954-974
@@ -400,7 +500,9 @@
 
 -
   id: 51
-  name: 藤原実方朝臣
+  name:
+    ja: 藤原実方朝臣
+    en: Fujiwara no Sanekata
   sex: 1
   monk: 0
   period: ???-999
@@ -408,7 +510,9 @@
 
 -
   id: 52
-  name: 藤原道信朝臣
+  name:
+    ja: 藤原道信朝臣
+    en: Fujiwara no Michinobu
   sex: 1
   monk: 0
   period: 972-994
@@ -416,7 +520,9 @@
 
 -
   id: 53
-  name: 右大将道綱母
+  name:
+    ja: 右大将道綱母
+    en: The Mother of Fujiwara no Michitsuna
   sex: 2
   monk: 0
   period: 936-995
@@ -424,7 +530,9 @@
 
 -
   id: 54
-  name: 儀同三司母
+  name:
+    ja: 儀同三司母
+    en: The Mother of Fujiwara no Korechika, Lady Kishi
   sex: 2
   monk: 0
   period: ???-996
@@ -432,7 +540,9 @@
 
 -
   id: 55
-  name: 大納言公任
+  name:
+    ja: 大納言公任
+    en: Fujiwara no Kintō
   sex: 1
   monk: 0
   period: 966-1041
@@ -440,7 +550,9 @@
 
 -
   id: 56
-  name: 和泉式部
+  name:
+    ja: 和泉式部
+    en: Lady Izumi Shikibu
   sex: 2
   monk: 0
   period: 978-???
@@ -448,7 +560,9 @@
 
 -
   id: 57
-  name: 紫式部
+  name:
+    ja: 紫式部
+    en: Lady Murasaki Shikibu
   sex: 2
   monk: 0
   period: ???-???
@@ -456,7 +570,9 @@
 
 -
   id: 58
-  name: 大弐三位
+  name:
+    ja: 大弐三位
+    en: Daini no Sanmi, Lady Kataiko
   sex: 2
   monk: 0
   period: 999-1082
@@ -464,7 +580,9 @@
 
 -
   id: 59
-  name: 赤染衛門
+  name:
+    ja: 赤染衛門
+    en: Lady Akazome Emon
   sex: 2
   monk: 0
   period: 956-1041
@@ -472,7 +590,9 @@
 
 -
   id: 60
-  name: 小式部内侍
+  name:
+    ja: 小式部内侍
+    en: Lady Koshikibu
   sex: 2
   monk: 0
   period: 999-1025
@@ -480,7 +600,9 @@
 
 -
   id: 61
-  name: 伊勢大輔
+  name:
+    ja: 伊勢大輔
+    en: Lady Ise no Ōsuke
   sex: 2
   monk: 0
   period: 989-1060
@@ -488,7 +610,9 @@
 
 -
   id: 62
-  name: 清少納言
+  name:
+    ja: 清少納言
+    en: Lady Sei Shōnagon
   sex: 2
   monk: 0
   period: 966-1025
@@ -496,7 +620,9 @@
 
 -
   id: 63
-  name: 左京大夫道雅
+  name:
+    ja: 左京大夫道雅
+    en: Fujiwara no Michimasa
   sex: 1
   monk: 0
   period: 992-1054
@@ -504,7 +630,9 @@
 
 -
   id: 64
-  name: 権中納言定頼
+  name:
+    ja: 権中納言定頼
+    en: Fujiwara no Sadayori
   sex: 1
   monk: 0
   period: 995-1045
@@ -512,7 +640,9 @@
 
 -
   id: 65
-  name: 相模
+  name:
+    ja: 相模
+    en: Lady Sagami
   sex: 2
   monk: 0
   period: 998-1061
@@ -520,7 +650,9 @@
 
 -
   id: 66
-  name: 前大僧正行尊
+  name:
+    ja: 前大僧正行尊
+    en: Abbot Gyōson
   sex: 1
   monk: 1
   period: 1055-1135
@@ -528,7 +660,9 @@
 
 -
   id: 67
-  name: 周防内侍
+  name:
+    ja: 周防内侍
+    en: Lady Suō
   sex: 2
   monk: 0
   period: 1037-1109
@@ -536,7 +670,9 @@
 
 -
   id: 68
-  name: 三条院
+  name:
+    ja: 三条院
+    en: Emperor Sanjō
   sex: 1
   monk: 0
   period: 976-1017
@@ -544,7 +680,9 @@
 
 -
   id: 69
-  name: 能因法師
+  name:
+    ja: 能因法師
+    en: The Monk Nōin
   sex: 1
   monk: 1
   period: 988-1050
@@ -552,7 +690,9 @@
 
 -
   id: 70
-  name: 良暹法師
+  name:
+    ja: 良暹法師
+    en: The Monk Ryōsen
   sex: 1
   monk: 1
   period: ???-???
@@ -560,7 +700,9 @@
 
 -
   id: 71
-  name: 大納言経信
+  name:
+    ja: 大納言経信
+    en: Minamoto no Tsunenobu
   sex: 1
   monk: 0
   period: 1016-1097
@@ -568,7 +710,9 @@
 
 -
   id: 72
-  name: 祐子内親王家紀伊
+  name:
+    ja: 祐子内親王家紀伊
+    en: Lady Kii
   sex: 2
   monk: 0
   period: ???-???
@@ -576,7 +720,9 @@
 
 -
   id: 73
-  name: 前権中納言匡房
+  name:
+    ja: 前権中納言匡房
+    en: Ōe no Masafusa
   sex: 1
   monk: 0
   period: 1041-1111
@@ -584,7 +730,9 @@
 
 -
   id: 74
-  name: 源俊頼朝臣
+  name:
+    ja: 源俊頼朝臣
+    en: Minamoto no Toshiyori
   sex: 1
   monk: 0
   period: 1055-1129
@@ -592,7 +740,9 @@
 
 -
   id: 75
-  name: 藤原基俊
+  name:
+    ja: 藤原基俊
+    en: Fujiwara no Mototoshi
   sex: 1
   monk: 0
   period: 1060-1142
@@ -600,7 +750,9 @@
 
 -
   id: 76
-  name: 法性寺入道前関白太政大臣
+  name:
+    ja: 法性寺入道前関白太政大臣
+    en: Fujiwara no Tadamichi
   sex: 1
   monk: 0
   period: 1097-1164
@@ -608,7 +760,9 @@
 
 -
   id: 77
-  name: 崇徳院
+  name:
+    ja: 崇徳院
+    en: Emperor Sutoku
   sex: 1
   monk: 0
   period: 1119-1164
@@ -616,7 +770,9 @@
 
 -
   id: 78
-  name: 源兼昌
+  name:
+    ja: 源兼昌
+    en: Minamoto no Kanemasa
   sex: 1
   monk: 0
   period: ???-???
@@ -624,7 +780,9 @@
 
 -
   id: 79
-  name: 左京大夫顕輔
+  name:
+    ja: 左京大夫顕輔
+    en: Fujiwara no Akisuke
   sex: 1
   monk: 0
   period: 1090-1155
@@ -632,7 +790,9 @@
 
 -
   id: 80
-  name: 待賢門院堀河
+  name:
+    ja: 待賢門院堀河
+    en: Lady Horikawa
   sex: 2
   monk: 0
   period: ???-???
@@ -640,7 +800,9 @@
 
 -
   id: 81
-  name: 後徳大寺左大臣
+  name:
+    ja: 後徳大寺左大臣
+    en: Fujiwara no Sanesada
   sex: 1
   monk: 0
   period: 1139-1192
@@ -648,7 +810,9 @@
 
 -
   id: 82
-  name: 道因法師
+  name:
+    ja: 道因法師
+    en: The Monk Dōin
   sex: 1
   monk: 1
   period: 1090-1182
@@ -656,7 +820,9 @@
 
 -
   id: 83
-  name: 皇太后宮大夫俊成
+  name:
+    ja: 皇太后宮大夫俊成
+    en: Fujiwara no Toshinari
   sex: 1
   monk: 0
   period: 1114-1204
@@ -664,7 +830,9 @@
 
 -
   id: 84
-  name: 藤原清輔朝臣
+  name:
+    ja: 藤原清輔朝臣
+    en: Fujiwara no Kiyosuke
   sex: 1
   monk: 0
   period: 1104-1177
@@ -672,7 +840,9 @@
 
 -
   id: 85
-  name: 俊恵法師
+  name:
+    ja: 俊恵法師
+    en: The Monk Shun'e
   sex: 1
   monk: 1
   period: 1113-1191
@@ -680,7 +850,9 @@
 
 -
   id: 86
-  name: 西行法師
+  name:
+    ja: 西行法師
+    en: The Monk Saigyō
   sex: 1
   monk: 1
   period: 1118-1190
@@ -688,7 +860,9 @@
 
 -
   id: 87
-  name: 寂蓮法師
+  name:
+    ja: 寂蓮法師
+    en: The Monk Jakuren
   sex: 1
   monk: 1
   period: 1139-1202
@@ -696,7 +870,9 @@
 
 -
   id: 88
-  name: 皇嘉門院別当
+  name:
+    ja: 皇嘉門院別当
+    en: Attendant to Empress Kiyoko
   sex: 2
   monk: 0
   period: ???-???
@@ -704,7 +880,9 @@
 
 -
   id: 89
-  name: 式子内親王
+  name:
+    ja: 式子内親王
+    en: Princess Shokushi
   sex: 2
   monk: 0
   period: 1149-1201
@@ -712,7 +890,9 @@
 
 -
   id: 90
-  name: 殷富門院大輔
+  name:
+    ja: 殷富門院大輔
+    en: Attendant to Empress Ryōshi
   sex: 2
   monk: 0
   period: 1130-1200
@@ -720,7 +900,9 @@
 
 -
   id: 91
-  name: 後京極摂政前太政大臣
+  name:
+    ja: 後京極摂政前太政大臣
+    en: Fujiwara no Yoshitsune
   sex: 1
   monk: 0
   period: 1169-1206
@@ -728,7 +910,9 @@
 
 -
   id: 92
-  name: 二条院讃岐
+  name:
+    ja: 二条院讃岐
+    en: Lady Sanuki
   sex: 2
   monk: 0
   period: 1141-1217
@@ -736,7 +920,9 @@
 
 -
   id: 93
-  name: 鎌倉右大臣
+  name:
+    ja: 鎌倉右大臣
+    en: Minamoto no Sanetomo
   sex: 1
   monk: 0
   period: 1192-1219
@@ -744,7 +930,9 @@
 
 -
   id: 94
-  name: 参議雅経
+  name:
+    ja: 参議雅経
+    en: Fujiwara no Masatsune
   sex: 1
   monk: 0
   period: 1170-1221
@@ -752,7 +940,9 @@
 
 -
   id: 95
-  name: 前大僧正慈円
+  name:
+    ja: 前大僧正慈円
+    en: Abbot Jien
   sex: 1
   monk: 1
   period: 1155-1225
@@ -760,7 +950,9 @@
 
 -
   id: 96
-  name: 入道前太政大臣
+  name:
+    ja: 入道前太政大臣
+    en: Fujiwara no Kintsune
   sex: 1
   monk: 0
   period: 1171-1244
@@ -768,7 +960,9 @@
 
 -
   id: 97
-  name: 権中納言定家
+  name:
+    ja: 権中納言定家
+    en: Fujiwara no Teika
   sex: 1
   monk: 0
   period: 1162-1241
@@ -776,7 +970,9 @@
 
 -
   id: 98
-  name: 従二位家隆
+  name:
+    ja: 従二位家隆
+    en: Fujiwara no Ietaka
   sex: 1
   monk: 0
   period: 1158-1237
@@ -784,7 +980,9 @@
 
 -
   id: 99
-  name: 後鳥羽院
+  name:
+    ja: 後鳥羽院
+    en: Emperor Gotoba
   sex: 1
   monk: 0
   period: 1180-1239
@@ -792,7 +990,9 @@
 
 -
   id: 100
-  name: 順徳院
+  name:
+    ja: 順徳院
+    en: Emperor Juntoku
   sex: 1
   monk: 0
   period: 1197-1242

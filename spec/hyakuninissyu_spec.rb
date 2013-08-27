@@ -15,17 +15,17 @@ describe HyakuninIssyu do
 		end
 
 		it "should return poet" do
-			@test_poem.poet.name.should_not be_nil
+			@test_poem.poet.name.ja.should_not be_nil
 		end
 
 		it "should return correct poem" do
-			correct_poem = @poems[@id-1]["poem"]
+			correct_poem = @poems[@id-1]["poem"]["kanji"]
 			@test_poem.poem.kanji.should eq(correct_poem)
 		end
 
 		it "should return correct poet" do
-			correct_poet = @poets[@id-1]["name"]
-			@test_poem.poet.name.should eq(correct_poet)
+			correct_poet = @poets[@id-1]["name"]["ja"]
+			@test_poem.poet.name.ja.should eq(correct_poet)
 		end
 
 		it "should return first half of poem" do

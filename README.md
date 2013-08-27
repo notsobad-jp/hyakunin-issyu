@@ -37,12 +37,16 @@ To retrieve the poem info,
 
     data.poem.kanji   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
     data.poem.kana   #=> "あさぼらけうじのかわぎりたえだえに　あらはれわたるせぜのあじろぎ"
+    data.poem.en   #=> "In the early dawn When the mists on Uji River Slowly lift and clear,  From the shallows to the deep, The stakes of fishing nets appear."
+
 
     data.poem.first.kanji   #=> "朝ぼらけ宇治の川霧たえだえに"
     data.poem.first.kana   #=> "あさぼらけうじのかわぎりたえだえに"
+    data.poem.first.en   #=> "In the early dawn When the mists on Uji River Slowly lift and clear,"
 
     data.poem.last.kanji   #=> "あらはれわたる瀬々の網代木"
     data.poem.last.kana   #=> "あらはれわたるせぜのあじろぎ"
+    data.poem.last.en   #=> "From the shallows to the deep, The stakes of fishing nets appear."
 
     data.poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
 
@@ -53,13 +57,16 @@ To retrieve the poem info,
 ###Poet Info | 歌人情報の取得
 To retrieve the poet info for the same poem,
 
-    data.poet.name   #=> "権中納言定頼"
+    data.poet.name.ja   #=> "権中納言定頼"
+    data.poet.name.en   #=> "Fujiwara no Sadayori"
     data.poet.period   #=> "995-1045"
     data.poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
-    data.poet.sex   #=> 1
+
     data.poet.male?   #=> true
     data.poet.female?   #=> false
     data.poet.monk?   #=> false
+    data.poet.semimaru?   #=> false
+
     data.poet.list   #=> ["天智天皇", "持統天皇", "柿本人麻呂", ... "]
 
 "list" method returns all the poet names in array.

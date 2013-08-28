@@ -1,64 +1,258 @@
 require "spec_helper.rb"
 
 describe HyakuninIssyu do
-	describe 'poem with particular poem id' do
-		before do
-			@id = rand(100)+1
-			@test_poem = HyakuninIssyu.new(@id)
+	describe 'Poem' do
+		before { @poems = YAML.load_file(File.expand_path(File.join('..', '..', 'lib', 'data', 'poems.yml'), __FILE__)) }
 
-			@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'lib', 'data', 'poems.yml'), __FILE__))
-			@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'lib', 'data', 'poets.yml'), __FILE__))
+		describe '#id?' do
+			context 'when provided proper id' do
+				before { @poem = HyakuninIssyu.new(3) }
+				it {
+					@poem.poem.id.should be_true
+				}
+			end
+
+			context 'when provided unproper id' do
+				before { @poem = HyakuninIssyu.new(101) }
+				it {
+					@poem.poem.should be_false
+				}
+			end
+
+			context 'when provided no id' do
+				before { @poem = HyakuninIssyu.new }
+				it {
+					@poem.poem.id.should be_true
+				}
+
+				it {
+					@poem.poem.id.should eq(1)
+				}
+			end
 		end
 
-		it "should return poem" do
-			@test_poem.poem.kanji.should_not be_nil
+		describe '#list' do
+			before { @poem = HyakuninIssyu.new }
+			it {
+				@poem.poem.list.should have(100).items
+			}
 		end
 
-		it "should return poet" do
-			@test_poem.poet.name.ja.should_not be_nil
+		context 'when showing full part' do
+			before { @poem = HyakuninIssyu.new(10) }
+
+			describe '#kana' do
+				it {
+					@poem.poem.kana.should include_kana
+				}
+
+				it {
+					@poem.poem.kana.split(//u).size.should eq(32)
+				}
+			end
+
+			describe '#kanji' do
+				it {
+					@poem.poem.kanji.should include_kanji
+				}
+
+				it {
+					@poem.poem.kanji.split(/ /).size.should eq(5)
+				}
+			end
+
+			describe '#en' do
+				it {
+					@poem.poem.en.should be_english
+				}
+			end
+
+			describe '#comment' do
+				it {
+					@poem.poem.comment.should include_kanji
+				}
+			end
+
 		end
 
-		it "should return correct poem" do
-			correct_poem = @poems[@id-1]["poem"]["kanji"]
-			@test_poem.poem.kanji.should eq(correct_poem)
+		context 'when showing the first part' do
+			describe '#kana' do
+				before { @poem = HyakuninIssyu.new(10) }
+				it {
+					@poem.poem.first.kana.should include_kana
+				}
+
+				it {
+					@poem.poem.first.kana.split(//u).size.should eq(17)
+				}
+			end
+
+			describe '#kanji' do
+				before { @poem = HyakuninIssyu.new(10) }
+				it {
+					@poem.poem.first.kanji.should include_kanji
+				}
+			end
+
+			describe '#en' do
+				before { @poem = HyakuninIssyu.new(10) }
+				it {
+					@poem.poem.first.en.should be_english
+				}
+			end
 		end
 
-		it "should return correct poet" do
-			correct_poet = @poets[@id-1]["name"]["ja"]
-			@test_poem.poet.name.ja.should eq(correct_poet)
-		end
+		context 'when showing the last part' do
+			describe '#kana' do
+				before { @poem = HyakuninIssyu.new(10) }
+				it {
+					@poem.poem.last.kana.should include_kana
+				}
 
-		it "should return first half of poem" do
-			first = @test_poem.poem.first.kanji
-			first.should_not be_nil
-		end
+				it {
+					@poem.poem.last.kana.split(//u).size.should eq(14)
+				}
+			end
 
-		it "should return last half of poem" do
-			last = @test_poem.poem.last.kanji
-			last.should_not be_nil
-		end
+			describe '#kanji' do
+				before { @poem = HyakuninIssyu.new(10) }
+				it {
+					@poem.poem.last.kanji.should include_kanji
+				}
+			end
 
-		it "should return kana without first/last option" do
-			kana = @test_poem.poem.kana
-			kana.should_not be_nil
+			describe '#en' do
+				before { @poem = HyakuninIssyu.new(10) }
+				it {
+					@poem.poem.last.en.should be_english
+				}
+			end
 		end
 	end
 
-	describe 'poem without any particular ids' do
-		before do
-			@test_poem = HyakuninIssyu.new
+	describe 'Poet' do
+		before { @poets = YAML.load_file(File.expand_path(File.join('..', '..', 'lib', 'data', 'poets.yml'), __FILE__)) }
+
+		describe '#id?' do
+			context 'when provided proper id' do
+				before { @poet = HyakuninIssyu.new(3) }
+				it {
+					@poet.poet.id.should be_true
+				}
+			end
+
+			context 'when provided unproper id' do
+				before { @poet = HyakuninIssyu.new(101) }
+				it {
+					@poet.poet.should be_false
+				}
+			end
+
+			context 'when provided no id' do
+				before { @poet = HyakuninIssyu.new }
+				it {
+					@poet.poet.id.should be_true
+				}
+
+				it {
+					@poet.poet.id.should eq(1)
+				}
+			end
 		end
 
-		it "should return poem[0]" do
-			@test_poem.poem.kanji.should eq('秋の田の かりほの庵の 苫をあらみ わが衣手は 露にぬれつつ')
+		describe '#list' do
+			before { @poet = HyakuninIssyu.new }
+			it {
+				@poet.poet.list.should have(100).items
+			}
 		end
 
-		it "should return the list of all poems" do
-			@test_poem.poem.list.size.should eq(100)
+		describe '#name' do
+			before { @poet = HyakuninIssyu.new }
+
+			describe '#ja' do
+				it {
+					@poet.poet.name.ja.should include_kanji
+				}
+			end
+
+			describe '#en' do
+				it {
+					@poet.poet.name.en.should be_english
+				}
+			end
 		end
 
-		it "should return the list of all poets" do
-			@test_poem.poet.list.size.should eq(100)
+		describe '#period' do
+			before { @poet = HyakuninIssyu.new }
+			it {
+				@poet.poet.period.should match(/-/)
+			}
+		end
+
+		describe '#male?' do
+			context 'when poet is male' do
+				before { @poet = HyakuninIssyu.new(1) }
+				it {
+					@poet.poet.male?.should be_true
+				}
+			end
+
+			context 'when poet is female' do
+				before { @poet = HyakuninIssyu.new(2) }
+				it {
+					@poet.poet.male?.should be_false
+				}
+			end
+		end
+
+		describe '#female?' do
+			context 'when poet is male' do
+				before { @poet = HyakuninIssyu.new(1) }
+				it {
+					@poet.poet.female?.should be_false
+				}
+			end
+
+			context 'when poet is female' do
+				before { @poet = HyakuninIssyu.new(2) }
+				it {
+					@poet.poet.female?.should be_true
+				}
+			end
+		end
+
+		describe '#monk?' do
+			context 'when poet is monk' do
+				before { @poet = HyakuninIssyu.new(8) }
+				it {
+					@poet.poet.monk?.should be_true
+				}
+			end
+
+			context 'when poet is not monk' do
+				before { @poet = HyakuninIssyu.new(1) }
+				it {
+					@poet.poet.monk?.should be_false
+				}
+			end
+		end
+
+		describe '#semimaru?' do
+			context 'when poet is semimaru' do
+				before { @poet = HyakuninIssyu.new(10) }
+				it {
+					@poet.poet.semimaru?.should be_true
+				}
+			end
+
+			context 'when poet is not semimaru' do
+				before { @poet = HyakuninIssyu.new(1) }
+				it {
+					@poet.poet.semimaru?.should be_false
+				}
+			end
 		end
 	end
 end
+

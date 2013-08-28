@@ -6,3 +6,4 @@ gemfile:
 branches:
   only:
     - master
+    - develop

@@ -2,40 +2,40 @@ require "HyakuninIssyu/version"
 require "yaml"
 
 class HyakuninIssyu
-	def initialize(id=1)
-		return false if id<1 || id>100
-		@poem = Poem.new(id)
-		@poet = Poet.new(id)
+	def initialize
+		@@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poems.yml'), __FILE__))
+		@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poets.yml'), __FILE__))
 	end
 
 	def self.img_path
     File.expand_path("../../assets/img", __FILE__)
   end
 
-	def poem
-		@poem
+	def poem(id)
+		return false if id<1 || id>100
+		poem = Poem.new(id)
 	end
 
-	def poet
-		@poet
+	def poet(id)
+		return false if id<1 || id>100
+		poet = Poet.new(id)
 	end
 
-	class Poem
+	def poems
+		@@poems
+	end
+
+	def poets
+		@@poets
+	end
+
+	class Poem < self
 		def initialize(id)
-			@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poems.yml'), __FILE__))
-			@poem = @poems[id-1]
+			@poem = @@poems[id-1]
 		end
 
 		def id
 			@poem['id']
-		end
-
-		def list
-			list = Array.new
-			for i in 0..99
-				list << @poems[i]['poem']['kanji']
-			end
-			return list
 		end
 
 		def kana
@@ -119,22 +119,13 @@ class HyakuninIssyu
 		end
 	end
 
-	class Poet
+	class Poet < self
 		def initialize(id)
-			@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poets.yml'), __FILE__))
-			@poet = @poets[id-1]
+			@poet = @@poets[id-1]
 		end
 
 		def id
 			@poet['id']
-		end
-
-		def list
-			list = Array.new
-			for i in 0..99
-				list << @poets[i]['name']['ja']
-			end
-			return list
 		end
 
 		def name

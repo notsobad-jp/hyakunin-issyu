@@ -11,13 +11,13 @@ class HyakuninIssyu
     File.expand_path("../../assets/img", __FILE__)
   end
 
-	def poem(id)
-		return false if id<1 || id>100
+	def poem(id=nil)
+		return false if id.nil? || id<1 || id>100
 		poem = Poem.new(id)
 	end
 
-	def poet(id)
-		return false if id<1 || id>100
+	def poet(id=nil)
+		return false if id.nil? || id<1 || id>100
 		poet = Poet.new(id)
 	end
 

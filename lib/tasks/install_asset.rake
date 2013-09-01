@@ -4,9 +4,9 @@ namespace :HyakuninIssyu do
 	task :install_img do |t, args|
 		require 'HyakuninIssyu'
 
-		mkdir_p "#{args['install_dir']}"
+		mkdir_p "#{args['install_dir']}/hyakunin-issyu"
 		Dir["#{HyakuninIssyu.img_path}/*.jpg"].each do |src|
-			cp src, "#{args['install_dir']}/"
+			cp src, "#{args['install_dir']}/hyakunin-issyu/"
 		end
 	end
 end

@@ -1,7 +1,6 @@
 # HyakuninIssyu
 [![Build Status](https://travis-ci.org/Tomomichi/HyakuninIssyu.png?branch=master)](https://travis-ci.org/Tomomichi/HyakuninIssyu)
 [![Dependency Status](https://gemnasium.com/Tomomichi/HyakuninIssyu.png)](https://gemnasium.com/Tomomichi/HyakuninIssyu)
-[![Coverage Status](https://coveralls.io/repos/Tomomichi/HyakuninIssyu/badge.png?branch=master)](https://coveralls.io/r/Tomomichi/HyakuninIssyu?branch=master)
 
 "HyakuninIssyu" is a Gem for installing poems and poets info of Hyakunin-Issyu, 100 poems by 100 poets into your apps.
 You can take any poems of Hyakunin-Issyu, poets info and a commentary on it, in addition to the feature to take the first or last half of the poem.
@@ -25,51 +24,69 @@ Or install it yourself as:
     $ gem install HyakuninIssyu
 
 ## Usage
-When retrieving the 64th poem (it's one of my favourite),
-make the instance of HyakuninIssyu class with its poem id first.
+First, you need to make the instance of HyakuninIssyu class.
 
-    data = HyakuninIssyu.new(64)
+    data = HyakuninIssyu.new
 
-If you don't pass the poem id, it retrieve the data of the first poem by Tenchi-Tennoh.
+Then use this to retrieve poem and poet data.
 
 ###Poem Info | 歌情報の取得
-To retrieve the poem info,
+When retrieving the 64th poem (it's one of my favourite), what you can do is:
 
-    data.poem.kanji   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
-    data.poem.kana   #=> "あさぼらけうじのかわぎりたえだえに　あらはれわたるせぜのあじろぎ"
-    data.poem.en   #=> "In the early dawn When the mists on Uji River Slowly lift and clear,  From the shallows to the deep, The stakes of fishing nets appear."
+		poem_data = data.poem(64)
 
+    poem_data.kanji   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
+    poem_data.kana   #=> "あさぼらけうじのかわぎりたえだえに　あらはれわたるせぜのあじろぎ"
+    poem_data.en   #=> "In the early dawn When the mists on Uji River Slowly lift and clear,  From the shallows to the deep, The stakes of fishing nets appear."
 
-    data.poem.first.kanji   #=> "朝ぼらけ宇治の川霧たえだえに"
-    data.poem.first.kana   #=> "あさぼらけうじのかわぎりたえだえに"
-    data.poem.first.en   #=> "In the early dawn When the mists on Uji River Slowly lift and clear,"
+    poem_data.first.kanji   #=> "朝ぼらけ宇治の川霧たえだえに"
+    poem_data.first.kana   #=> "あさぼらけうじのかわぎりたえだえに"
+    poem_data.first.en   #=> "In the early dawn When the mists on Uji River Slowly lift and clear,"
 
-    data.poem.last.kanji   #=> "あらはれわたる瀬々の網代木"
-    data.poem.last.kana   #=> "あらはれわたるせぜのあじろぎ"
-    data.poem.last.en   #=> "From the shallows to the deep, The stakes of fishing nets appear."
+    poem_data.last.kanji   #=> "あらはれわたる瀬々の網代木"
+    poem_data.last.kana   #=> "あらはれわたるせぜのあじろぎ"
+    poem_data.last.en   #=> "From the shallows to the deep, The stakes of fishing nets appear."
 
-    data.poem.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
-
-    data.poem.list   #=> ["秋の田の かりほの庵の 苫をあらみ わが衣手は 露にぬれつつ", "春過ぎて..."]
-
-"list" method returns all the poem data in array.
+    poem_data.comment   #=> "「朝ぼらけ」は夜明けであたりがほのぼのと明るくなってくる頃..."
 
 ###Poet Info | 歌人情報の取得
 To retrieve the poet info for the same poem,
 
-    data.poet.name.ja   #=> "権中納言定頼"
-    data.poet.name.en   #=> "Fujiwara no Sadayori"
-    data.poet.period   #=> "995-1045"
-    data.poet.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
+		poet_data = data.poet(64)
 
-    data.poet.male?   #=> true
-    data.poet.female?   #=> false
-    data.poet.monk?   #=> false
-    data.poet.semimaru?   #=> false
+    poet_data.name.ja   #=> "権中納言定頼"
+    poet_data.name.en   #=> "Fujiwara no Sadayori"
+    poet_data.period   #=> "995-1045"
+    poet_data.info   #=> "本名は藤原定頼(ふじわらの さだより)。平安時代中期の公家・歌人..."
 
-    data.poet.list   #=> ["天智天皇", "持統天皇", "柿本人麻呂", ... "]
+    poet_data.male?   #=> true
+    poet_data.female?   #=> false
+    poet_data.monk?   #=> false
+    poet_data.semimaru?   #=> false
 
-"list" method returns all the poet names in array.
+###List of poems and poets | データをまとめて扱うとき
+If you want to list the poems and poets, you can use "poems" and "poets" method to retrieve the raw data of them.
+
+    data.poems  #=>[{"id"=>1, "poem"=>{"kanji"=>"秋の田の..", ...}}, {"id"=>2, "poem"=>{"kanji"=>"..."}}, ...]
+    data.poets  #=>[{"id"=>1, "name"=>{"ja"=>"天智天皇", ...}}, {"id"=>2, "name"=>{"kanji"=>"..."}}, ...]
+
+Use these to retrieve many poems and poets at the same time.
+
+
+##Use image files of the cards
+Image files of the Hyakunin-Issyu cards are installed in this gem.
+If you wanna use these, it's better to copy them to your project directory.
+
+The rake task for this is set. Just run the following:
+
+    rake HyakuninIssyu:install_img['IMG_PATH']
+
+then "hyakunin-issyu" directory will be created under your IMG_PATH, and
+all the images will be copied there.
+
+
+**All the images used in this gem are from Wikipedia and they're under the public license.
+
 
 ## Contributing
 

@@ -8,6 +8,10 @@ class HyakuninIssyu
 		@poet = Poet.new(id)
 	end
 
+	def self.img_path
+    File.expand_path("../../img", __FILE__)
+  end
+
 	def poem
 		@poem
 	end

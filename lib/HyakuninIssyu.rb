@@ -9,7 +9,7 @@ class HyakuninIssyu
 	end
 
 	def self.img_path
-    File.expand_path("../../img", __FILE__)
+    File.expand_path("../../assets/img", __FILE__)
   end
 
 	def poem
@@ -22,7 +22,7 @@ class HyakuninIssyu
 
 	class Poem
 		def initialize(id)
-			@poems = YAML.load_file(File.expand_path(File.join('..', 'data', 'poems.yml'), __FILE__))
+			@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poems.yml'), __FILE__))
 			@poem = @poems[id-1]
 		end
 
@@ -121,7 +121,7 @@ class HyakuninIssyu
 
 	class Poet
 		def initialize(id)
-			@poets = YAML.load_file(File.expand_path(File.join('..', 'data', 'poets.yml'), __FILE__))
+			@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poets.yml'), __FILE__))
 			@poet = @poets[id-1]
 		end
 

@@ -33,7 +33,7 @@ Then use this to retrieve poem and poet data.
 ###Poem Info | 歌情報の取得
 When retrieving the 64th poem (it's one of my favourite), what you can do is:
 
-		poem_data = data.poem(64)
+    poem_data = data.poem(64)
 
     poem_data.kanji   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
     poem_data.kana   #=> "あさぼらけうじのかわぎりたえだえに　あらはれわたるせぜのあじろぎ"
@@ -52,7 +52,7 @@ When retrieving the 64th poem (it's one of my favourite), what you can do is:
 ###Poet Info | 歌人情報の取得
 To retrieve the poet info for the same poem,
 
-		poet_data = data.poet(64)
+    poet_data = data.poet(64)
 
     poet_data.name.ja   #=> "権中納言定頼"
     poet_data.name.en   #=> "Fujiwara no Sadayori"

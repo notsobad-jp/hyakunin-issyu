@@ -22,11 +22,19 @@ class HyakuninIssyu
 	end
 
 	def poems
-		@@poems
+		poems = Array.new
+		for i in 1..100
+			poems[i] = Poem.new(i)
+		end
+		return poems
 	end
 
 	def poets
-		@@poets
+		poets = Array.new
+		for i in 1..100
+			poets[i] = Poet.new(i)
+		end
+		return poets
 	end
 
 	class Poem < self

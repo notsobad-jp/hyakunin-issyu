@@ -67,9 +67,19 @@ To retrieve the poet info for the same poem,
 ###List of poems and poets | データをまとめて扱うとき
 If you want to list the poems and poets, you can use "poems" and "poets" method to retrieve the raw data of them.
 
-    data.poems  #=>[{"id"=>1, "poem"=>{"kanji"=>"秋の田の..", ...}}, {"id"=>2, "poem"=>{"kanji"=>"..."}}, ...]
-    data.poets  #=>[{"id"=>1, "name"=>{"ja"=>"天智天皇", ...}}, {"id"=>2, "name"=>{"kanji"=>"..."}}, ...]
+    poems_data = data.poems
+    poems_data[64].kanji   #=> "朝ぼらけ 宇治の川霧 たえだえに あらはれわたる 瀬々の網代木"
+    poems_data[64].kana   #=> "あさぼらけうじのかわぎりたえだえに　あらはれわたるせぜのあじろぎ"
+    poems_data[64].en   #=> "In the early dawn When the mists on Uji River Slowly lift and clear,  From the shallows to the deep, The stakes of fishing nets appear."
+		...
 
+    poets_data = data.poets
+    poets_data[64].name.ja   #=> "権中納言定頼"
+    poets_data[64].name.en   #=> "Fujiwara no Sadayori"
+    poets_data[64].period   #=> "995-1045"
+		...
+
+You can use all the method which were shown before, for each content of the poems/poets data.
 Use these to retrieve many poems and poets at the same time.
 
 

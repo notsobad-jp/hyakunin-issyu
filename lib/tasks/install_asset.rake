@@ -4,6 +4,10 @@ namespace :HyakuninIssyu do
 	task :install_img do |t, args|
 		require 'HyakuninIssyu'
 
+		Gem::Specification.new do |spec|
+			spec.name          = "HyakuninIssyu"
+		end
+
 		mkdir_p "#{args['install_dir']}/hyakunin-issyu"
 		Dir["#{HyakuninIssyu.img_path}/*.jpg"].each do |src|
 			cp src, "#{args['install_dir']}/hyakunin-issyu/"

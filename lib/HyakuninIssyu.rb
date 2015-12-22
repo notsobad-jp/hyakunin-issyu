@@ -4,11 +4,13 @@ class HyakuninIssyu
 	def initialize
 		@@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poems.yml'), __FILE__))
 		@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poets.yml'), __FILE__))
+		@@raw = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'data.yml'), __FILE__))
+		p @@raw
 	end
 
-	def self.img_path
-    File.expand_path("../../assets/img", __FILE__)
-  end
+	def all
+		@@raw
+	end
 
 	def poem(id=nil)
 		return false if id.nil? || id<1 || id>100
@@ -20,21 +22,6 @@ class HyakuninIssyu
 		poet = Poet.new(id)
 	end
 
-	def poems
-		poems = Array.new
-		for i in 1..100
-			poems[i] = Poem.new(i)
-		end
-		return poems
-	end
-
-	def poets
-		poets = Array.new
-		for i in 1..100
-			poets[i] = Poet.new(i)
-		end
-		return poets
-	end
 
 	class Poem < self
 		def initialize(id)

@@ -1,7 +1,7 @@
-require "HyakuninIssyu/version"
+require "HyakuninIssyu/engine"
 require "yaml"
 
-class HyakuninIssyu
+module HyakuninIssyu
 	def initialize
 		@@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poems.yml'), __FILE__))
 		@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poets.yml'), __FILE__))

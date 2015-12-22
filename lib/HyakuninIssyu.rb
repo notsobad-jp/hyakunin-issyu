@@ -1,27 +1,44 @@
 require "yaml"
 
 class HyakuninIssyu
-	def initialize
-		@@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poems.yml'), __FILE__))
-		@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poets.yml'), __FILE__))
-		@@raw = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'data.yml'), __FILE__))
-		p @@raw
-	end
+	@@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poems.yml'), __FILE__))
+	@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poets.yml'), __FILE__))
 
-	def all
-		@@raw
-	end
-
-	def poem(id=nil)
+	def self.find(id=nil)
 		return false if id.nil? || id<1 || id>100
-		poem = Poem.new(id)
+		Data.new(id)
 	end
 
-	def poet(id=nil)
-		return false if id.nil? || id<1 || id>100
-		poet = Poet.new(id)
+	def self.all
+		all = []
+		for i in 1..100
+			all << self.find(i)
+		end
+		all
 	end
 
+	def self.sample(n=1)
+		n = 100 if n > 100
+		ids = (1..100).sample(n)
+		ids.each do |i|
+			sample << self.find(i)
+		end
+		sample
+	end
+
+	class Data < self
+		def initialize(id)
+			@id = id
+		end
+
+		def poem
+			Poem.new(@id)
+		end
+
+		def poet
+			Poet.new(@id)
+		end
+	end
 
 	class Poem < self
 		def initialize(id)

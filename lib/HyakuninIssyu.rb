@@ -1,4 +1,3 @@
-require "HyakuninIssyu/engine"
 require "HyakuninIssyu/version"
 require "yaml"
 

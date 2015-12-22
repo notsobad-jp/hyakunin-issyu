@@ -1,5 +1,5 @@
 class HyakuninIssyu
   class Engine < ::Rails::Engine
-		isolate_namespace Subtlepatterns
+		isolate_namespace HyakuninIssyu
 	end
 end

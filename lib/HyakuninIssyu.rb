@@ -180,4 +180,3 @@ class HyakuninIssyu
 		end
 	end
 end
-end

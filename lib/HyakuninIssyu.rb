@@ -19,7 +19,7 @@ class HyakuninIssyu
 
 	def self.sample(n=1)
 		n = 100 if n > 100
-		ids = (1..100).sample(n)
+		ids = (1..100).to_a.sample(n)
 		ids.each do |i|
 			sample << self.find(i)
 		end

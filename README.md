@@ -85,19 +85,17 @@ As normal arrays, you can retrieve random poems as you like:
     => [#<HyakuninIssyu::Data:0x007fcffc245918 @id=23>, #<Hyakunin...]
 
 
-## Use image files of the cards
-Image files of the Hyakunin-Issyu cards are installed in this gem.
-If you wanna use these, it's better to copy them to your project directory.
+## Assets(images and audio files)
+If you need images or audio files of Hyakunin-Issyu,
+please use the bower package "hyakunin-issyu-assets".
 
-The rake task for this is set. Just run the following:
-
-    rake HyakuninIssyu:install_img['IMG_PATH']
-
-then "hyakunin-issyu" directory will be created under your IMG_PATH, and
-all the images will be copied there.
+    bower install hyakunin-issyu-assets
 
 
-**All the images used in this gem are from Wikipedia and they're under the public license.
+
+### License
+All the images are from Wikipedia and they're under the public license.
+Audio files are from NHK Library. Please check the license before use,
 
 
 ## Contributing

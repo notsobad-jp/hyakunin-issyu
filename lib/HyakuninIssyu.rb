@@ -1,3 +1,4 @@
+require "HyakuninIssyu/engine"
 require "HyakuninIssyu/version"
 require "yaml"
 
@@ -178,4 +179,5 @@ class HyakuninIssyu
 			@poet['id'] == 10
 		end
 	end
+end
 end

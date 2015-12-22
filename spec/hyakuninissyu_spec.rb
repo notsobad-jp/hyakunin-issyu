@@ -3,7 +3,7 @@ require "spec_helper.rb"
 describe HyakuninIssyu do
 	before { @data = HyakuninIssyu.new }
 	describe 'Poem' do
-		before { @poems = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poems.yml'), __FILE__)) }
+		before { @poems = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poems.yml'), __FILE__)) }
 
 		describe '#id?' do
 			context 'when provided proper id' do
@@ -117,7 +117,7 @@ describe HyakuninIssyu do
 	end
 
 	describe 'Poet' do
-		before { @poets = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poets.yml'), __FILE__)) }
+		before { @poets = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poets.yml'), __FILE__)) }
 
 		describe '#id?' do
 			context 'when provided proper id' do
@@ -231,4 +231,3 @@ describe HyakuninIssyu do
 		end
 	end
 end
-

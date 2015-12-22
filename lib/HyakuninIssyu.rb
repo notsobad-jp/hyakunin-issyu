@@ -3,8 +3,8 @@ require "yaml"
 
 class HyakuninIssyu
 	def initialize
-		@@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poems.yml'), __FILE__))
-		@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'assets', 'data', 'poets.yml'), __FILE__))
+		@@poems = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poems.yml'), __FILE__))
+		@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poets.yml'), __FILE__))
 	end
 
 	def self.img_path

@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'HyakuninIssyu/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "HyakuninIssyu"
+  spec.name          = "hyakunin-issyu"
   spec.version       = HyakuninIssyu::VERSION
   spec.authors       = ["tomomichi"]
   spec.email         = ["tomomichi.onishi@gmail.com"]
   spec.description   = %q{This Gem offer all the information about Hyakunin-issyu, the One Hundred Poems by One Hundred Poets.}
   spec.summary       = %q{This Gem offer all the information about Hyakunin-issyu, the One Hundred Poems by One Hundred Poets.}
-  spec.homepage      = "https://github.com/Tomomichi/HyakuninIssyu"
+  spec.homepage      = "https://github.com/notsobad-jp/hyakunin-issyu"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

@@ -17,18 +17,13 @@ class HyakuninIssyu
 		all
 	end
 
-	def self.sample(n=1)
-		n = 100 if n > 100
-		ids = (1..100).to_a.sample(n)
-		ids.each do |i|
-			sample << self.find(i)
-		end
-		sample
-	end
-
 	class Data < self
 		def initialize(id)
 			@id = id
+		end
+
+		def inspect
+			self.poem.inspect
 		end
 
 		def poem
@@ -43,6 +38,10 @@ class HyakuninIssyu
 	class Poem < self
 		def initialize(id)
 			@poem = @@poems[id-1]
+		end
+
+		def inspect
+			self.kanji
 		end
 
 		def id
@@ -88,6 +87,10 @@ class HyakuninIssyu
 				@first_en = en_data[0]
 			end
 
+			def inspect
+				self.kanji
+			end
+
 			def kana
 				@first_kana
 			end
@@ -116,6 +119,10 @@ class HyakuninIssyu
 				@last_en = en_data[1]
 			end
 
+			def inspect
+				self.kanji
+			end
+
 			def kana
 				@last_kana
 			end
@@ -135,6 +142,10 @@ class HyakuninIssyu
 			@poet = @@poets[id-1]
 		end
 
+		def inspect
+			self.name.inspect
+		end
+
 		def id
 			@poet['id']
 		end
@@ -146,6 +157,10 @@ class HyakuninIssyu
 		class Name
 			def initialize(data)
 				@name = data['name']
+			end
+
+			def inspect
+				self.ja
 			end
 
 			def ja

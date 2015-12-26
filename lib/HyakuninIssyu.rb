@@ -5,7 +5,7 @@ class HyakuninIssyu
 	@@poets = YAML.load_file(File.expand_path(File.join('..', '..', 'config', 'poets.yml'), __FILE__))
 
 	def self.find(id=nil)
-		return false if id.nil? || id<1 || id>100
+		return nil if id.nil? || id<1 || id>100
 		Data.new(id)
 	end
 
@@ -22,8 +22,8 @@ class HyakuninIssyu
 			@id = id
 		end
 
-		def inspect
-			self.poem.inspect
+		def to_s
+			self.poem.to_s
 		end
 
 		def poem
@@ -40,7 +40,7 @@ class HyakuninIssyu
 			@poem = @@poems[id-1]
 		end
 
-		def inspect
+		def to_s
 			self.kanji
 		end
 
@@ -87,7 +87,7 @@ class HyakuninIssyu
 				@first_en = en_data[0]
 			end
 
-			def inspect
+			def to_s
 				self.kanji
 			end
 
@@ -119,7 +119,7 @@ class HyakuninIssyu
 				@last_en = en_data[1]
 			end
 
-			def inspect
+			def to_s
 				self.kanji
 			end
 
@@ -142,8 +142,8 @@ class HyakuninIssyu
 			@poet = @@poets[id-1]
 		end
 
-		def inspect
-			self.name.inspect
+		def to_s
+			self.name.to_s
 		end
 
 		def id
@@ -159,7 +159,7 @@ class HyakuninIssyu
 				@name = data['name']
 			end
 
-			def inspect
+			def to_s
 				self.ja
 			end
 
